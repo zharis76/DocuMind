@@ -1,0 +1,7 @@
+.venv/
+.env
+**pycache**/
+*.pyc
+uploaded.pdf
+The Laws of Human Nature.pdf
+*.pdf
