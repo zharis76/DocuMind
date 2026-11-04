@@ -23,10 +23,11 @@ Instructions:
     prompt = f"Context:\n{context}\n\nQuestion:\n{question}\n\nAnswer:"
     
     response = client.chat.completions.create(
-        model="qwen/qwen3.8-27b",
-        messages=[
-            {"role": "system", "content": system},
-            {"role": "user", "content": prompt}
-        ]
-    )
+    model="qwen/qwen3.8-27b",
+    messages=[
+        {"role": "system", "content": system},
+        {"role": "user", "content": prompt}
+    ],
+    max_tokens=800
+)
     return response.choices[0].message.content
