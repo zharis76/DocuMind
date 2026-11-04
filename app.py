@@ -10,11 +10,7 @@ from embed import embed
 from answer import answer
 
 # Load .env
-with open(".env") as f:
-    for line in f:
-        if "=" in line and not line.startswith("#"):
-            k, v = line.strip().split("=", 1)
-            os.environ[k.strip()] = v.strip()
+# env vars are set directly on Render
 
 app = FastAPI()
 
